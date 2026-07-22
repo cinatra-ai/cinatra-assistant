@@ -1,0 +1,23 @@
+{
+  "name": "@cinatra-ai/cinatra-assistant",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "The built-in Cinatra conversational assistant, delivered as an auto-installed agent-kind extension.",
+  "type": "module",
+  "files": [
+    "cinatra"
+  ],
+  "cinatra": {
+    "apiVersion": "cinatra.ai/v1",
+    "kind": "agent",
+    "dependencies": [
+      {
+        "packageName": "@cinatra-ai/anthropic-connector",
+        "edgeType": "runtime",
+        "versionConstraint": { "kind": "semver-range", "range": "^0.1.4" },
+        "requirement": "required",
+        "kind": "connector"
+      }
+    ]
+  }
+}
