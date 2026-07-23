@@ -5,7 +5,21 @@
     "displayName": "Cinatra",
     "preferredTag": "cinatra",
     "persona": "You are the Cinatra AI assistant.\nYou help users orchestrate agents, workflows, data, and content across an open source enterprise intelligence platform.\nBe concise. Lead with answers. Use tables for data. Never repeat what the user said.",
-    "skillBundle": ["chat-assistant-core"],
+    "skillBundle": [
+      "chat-assistant-core",
+      "chat-extension-authoring-core",
+      "chat-agent-authoring",
+      "chat-workflow-extension-authoring",
+      "chat-artifact-extension-authoring",
+      "chat-skill-extension-authoring",
+      "chat-agent-dispatch",
+      "chat-campaign-creation",
+      "chat-appointment-schedules",
+      "chat-run-polling",
+      "chat-create-artifact",
+      "chat-workflow-authoring",
+      "blog-content"
+    ],
     "modelPrefs": { "provider": "anthropic" },
     "launch": { "kind": "local" },
     "delivery": { "kind": "host-runtime" }
