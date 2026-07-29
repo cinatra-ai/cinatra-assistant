@@ -30,6 +30,25 @@ use). Invariants the parser enforces, fail-closed:
 - The block must PROJECT to a valid `assistant_config` sidecar (`persona` +
   `skillBundle` are the two load-bearing fields).
 
+## `skillBundle` — the five-router successor bundle
+
+`skillBundle` mirrors core's `CINATRA_ASSISTANT_SKILL_BUNDLE` exactly — same
+slugs, same order. Since the assistant-skills consolidation fold
+(cinatra-ai/cinatra#2090) the chat guidance ships as **five consolidated router
+bundles**: each slug is the single router `SKILL.md` of one successor
+`kind: "skill"` extension, and the absorbed sub-skill bodies ride beside it as
+`references/*.md`, read on demand (one hop). Order is load-bearing —
+`skillBundle[0]` (`chat-assistant-core`) is the always-loaded system skill.
+
+**Size contract.** Keep the bundle at 5 slugs; at most 7. The typed
+skill-injection contract (cinatra-ai/cinatra#2188) caps the resolved set at 8
+*including* the personal delta, so 5 + delta = 6 never truncates; a bundle
+larger than 7 would let the cap silently drop assistant skills again. Until the
+built-in retirement cuts over (cinatra-ai/cinatra#1927) core still carries its
+own in-code constant, so core and this declaration are duplicate parity
+surfaces: a bundle change on either side has to move in step with the other, or
+the two drift apart.
+
 ## Credentials — none in this package
 
 The assistant handles no credentials. Model access resolves through the required

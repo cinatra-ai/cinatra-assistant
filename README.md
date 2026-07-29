@@ -8,8 +8,8 @@ rather than a hardcoded runtime constant.
 **Identity.** Display name **Cinatra**; preferred tag `cinatra`, a built-in and
 immutable alias (all assistant tags are lowercase per the owner ruling 2026-07-22
 (groganz)). It launches `local` (runs on the host runtime) and delivers turns
-`host-runtime` (in-process). It loads the `chat-assistant-core` reference skill
-bundle and prefers the `anthropic` model provider.
+`host-runtime` (in-process). It loads the five-router chat skill bundle led by
+`chat-assistant-core` and prefers the `anthropic` model provider.
 
 **Credentials.** This package handles no credentials. Model access resolves
 through the required `@cinatra-ai/anthropic-connector` runtime dependency, which
@@ -30,4 +30,4 @@ the block is fail-closed on unknown keys).
 - Present the default Cinatra assistant as an installable, routable extension
 - Reserve the immutable built-in tag `cinatra` for this assistant
 - Resolve model access through the Anthropic connector — no in-package secrets
-- Load the `chat-assistant-core` reference skill bundle at runtime
+- Load the five-router chat skill bundle led by `chat-assistant-core` at runtime
