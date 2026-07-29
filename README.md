@@ -6,9 +6,9 @@ workspace talks to out of the box, expressed as a portable, validated declaratio
 rather than a hardcoded runtime constant.
 
 **Identity.** Display name **Cinatra**; preferred tag `cinatra`, a built-in and
-immutable alias (all assistant tags are lowercase per the owner ruling 2026-07-22
-(groganz)). It launches `local` (runs on the host runtime) and delivers turns
-`host-runtime` (in-process). It loads the five-router chat skill bundle led by
+immutable alias. Assistant tags are always lowercase. It launches `local` (runs
+on the host runtime) and delivers turns `host-runtime` (in-process). It loads
+the five-router chat skill bundle led by
 `chat-assistant-core` and prefers the `anthropic` model provider.
 
 **Credentials.** This package handles no credentials. Model access resolves
