@@ -1,5 +1,6 @@
 {
   "formatVersion": 1,
+  "protected": true,
   "assistant": {
     "abiVersion": 1,
     "displayName": "Cinatra",
